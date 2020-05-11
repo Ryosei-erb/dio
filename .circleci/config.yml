@@ -6,15 +6,10 @@ jobs:
       - image: circleci/php:7.2-node-browsers
       - image: circleci/mysql:5.7
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mysql:9.4
-
     environment:
       - APP_DEBUG: true
-      - APP_ENV: ${APP_ENV}
-      - APP_KEY: ${APP_KEY}
+      - APP_ENV: local
+      - APP_KEY: base64:z+nFyZWJoO2UNmTdUPkB/O0q7SOziHXxWFEi0ES76fo=
       - DB_CONNECTION: circle_test
       - MYSQL_ALLOW_EMPTY_PASSWORD: true
 
